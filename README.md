@@ -5,8 +5,13 @@ Ce dépôt contient 3 versions du solveur SMT veriT, développées au cours de m
 Une fois extrait chaque version du solveur puet être complilé sur une architecture Linux de la façon suivante:
 
 autoconf
+
+
 ./configure
+
+
 make -j7
+
 
 Puis veriT peut-être exécuté par la commande ./veriT
 
@@ -15,6 +20,8 @@ Pour la version Machine learning il est conseillé de compiler les modèles ind�
 La commande suivante peut être utilisée pour compiler plus rapidement ces deux fichiers :
 
 gcc -lgmp -DWITH_OPENSLL -DWITH_COOKIES -fPIC -E xgboost_classifier.c -o xgboost_classifier.i
+
+
 gcc -lgmp -DWITH_OPENSLL -DWITH_COOKIES -fPIC -c xgboost_classifier.i -o xgboost_classifier.o
 
 Ces trois versions implémentent les techniques décrites dans mon manuscrit de thèse.
