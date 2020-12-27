@@ -2,7 +2,7 @@
 
 Ce dépôt contient 3 versions du solveur SMT veriT, développées au cours de ma thèse au laboratoire INRIA-LORIA, au sein de l'équipe veridis.
 
-Une fois extrait chaque version du solveur puet être complilé sur une architecture Linux de la façon suivante:
+Une fois extrait chaque version du solveur peut être complilée sur une architecture Linux de la façon suivante:
 
 autoconf
 
