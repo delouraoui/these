@@ -16,13 +16,13 @@ make -j7
 Puis veriT peut-être exécuté par la commande ./veriT
 
 Pour la version Machine learning, il est conseillé de compiler les modèles indépendamment 
-(src/symbolic/xgboost_classifier2.c et src/symbolic/xgboost_classifier.c), puis d'ajouter les binaires au reste pour l'édition de liens.
-La commande suivante peut être utilisée pour compiler plus rapidement ces deux fichiers :
+(src/symbolic/xgboost_classifier2.c et src/symbolic/xgboost_classifier.c), puis d'ajouter les binaires au reste pour l'édition de liens, comme ceci :
 
-gcc -lgmp -DWITH_OPENSLL -DWITH_COOKIES -fPIC -E xgboost_classifier.c -o xgboost_classifier.i
+gcc -E xgboost_classifier.c -o xgboost_classifier.i
 
+gcc -c xgboost_classifier.i -o xgboost_classifier.o
 
-gcc -lgmp -DWITH_OPENSLL -DWITH_COOKIES -fPIC -c xgboost_classifier.i -o xgboost_classifier.o
+Puis coller directement dans le répertoire src/symbolic xgboost_classifier.o (et xgboost_classifier2.o), et relancer make.
 
 Ces trois versions implémentent les techniques décrites dans mon manuscrit de thèse.
 
@@ -38,7 +38,7 @@ sur une version curryfiée du framework CCFV (la première version de HOCCFV).
 Cette version de CCFV est évoquée dans ma thèse.
 
 
-L'archive nommée veriTML-COMPILINGvers.zip, correspond au code source du solveur veriT 
+L'archive nommée veriTML.tar.xz , correspond au code source du solveur veriT 
 utilisant l'approche de séléctions d'instances décrite dans ma thèse dans le chapitre 4.
 Cette archive contient le code source du solveur veriT, ainsi que les deux modèles utilisés 
 (src/symbolic/xgboost_classifier.c, et  src/symbolic/xgboost_classifier2.c) pour les évaluations décrites en section 4.4. 
